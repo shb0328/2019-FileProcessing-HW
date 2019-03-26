@@ -5,14 +5,18 @@
 int main(int argc, char* argv[])
 {
 	int cnt;
-	
+	char buffer[100] = {0,};
+
 	int src = open(argv[1],O_RDONLY);
 	int dest = open(argv[2],O_WRONLY|O_TRUNC|O_CREAT);
-	
-	while(read(src,&cnt,1)!=0)
-		write(dest,&cnt,1);
 
+	while((cnt=read(src,buffer,100))!=0)
+	{
+		write(dest,buffer,cnt);
+		if(cnt != 100) break;
+	}
 	close(src);
-	close(dest);	
+	close(dest);
+
 	return 0;
 }	

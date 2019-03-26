@@ -15,14 +15,13 @@ int main(int argc, char *argv[])
 	char* data;
 	data = argv[3];
 
-	char buffer[200];
+	char buffer[1024];
 	char c;
 	int i=0;
 
 	lseek(fd,offset,SEEK_SET);
 	while(read(fd,&c,1) != 0)
 		buffer[i++]=c;
-	printf("%s\n",buffer);
 
 	lseek(fd,offset,SEEK_SET);
 	write(fd,data,10);
