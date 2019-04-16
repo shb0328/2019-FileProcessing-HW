@@ -1,0 +1,58 @@
+FTLtable ::-1 -1 
+
+* write *
+
+FTLtable ::-1 -1 
+
+lbn : 0, offset : 0, pbn : 0, ppn: 0, FTLtable[0] : 0 
+
+* write *
+
+FTLtable ::0 -1 
+
+lbn : 0, offset : 1, pbn : 0, ppn: 1, FTLtable[0] : 0 
+
+* write *
+
+FTLtable ::0 -1 
+
+lbn : 0, offset : 2, pbn : 0, ppn: 2, FTLtable[0] : 0 
+
+* write *
+
+FTLtable ::0 -1 
+
+lbn : 1, offset : 0, pbn : 1, ppn: 3, FTLtable[1] : 1 
+
+* write *
+
+FTLtable ::0 1 
+
+lbn : 2, offset : 2, pbn : 2, ppn: 8, FTLtable[2] : 2 
+
+* read *
+
+FTLtable ::0 1 
+
+lbn : 0, offset : 0, pbn : 0, ppn: 0, FTLtable[0] : 0 
+
+buf :: a„¯ø
+* write *
+
+FTLtable ::0 1 
+
+lbn : 0, offset : 0, pbn : 0, ppn: 0, FTLtable[0] : 0 
+
+* write *
+
+FTLtable ::2 1 
+
+lbn : 2, offset : 2, pbn : 0, ppn: 2, FTLtable[2] : 0 
+
+* read *
+
+FTLtable ::2 1 
+
+lbn : 2, offset : 2, pbn : 0, ppn: 2, FTLtable[2] : 0 
+
+buf :: g„¯ø
